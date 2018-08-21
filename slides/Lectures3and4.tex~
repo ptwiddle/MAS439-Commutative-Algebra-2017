@@ -1,0 +1,125 @@
+\documentclass{beamer}
+
+\usepackage{amsmath, amssymb, hyperref, graphics}
+\usepackage{mathpazo}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\title{Commutative Algebra MAS439 \\ Lecture 2: Homomorphisms}
+\author{Paul Johnson \\ \href{mailto:paul.johnson@sheffield.ac.uk}{paul.johnson@sheffield.ac.uk} \\ Hicks J06b}
+\date{October 5th}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Plan: slow down a little}
+
+  \begin{block}{Last week - Didn't finish}
+    \begin{itemize}
+\item Course policies + philosophy
+    \item  Sections 2-4: Rings, examples, homomorphisms
+\end{itemize}
+  \end{block}
+  \begin{block}{Today}
+\begin{itemize}
+\item    Finish Section 4: Isomorphisms, image, kernel
+\item    Cover Section 5: Subrings
+\item   Start Section 6: Ideals  
+\end{itemize}
+\end{block}
+
+\begin{block}{Next week}
+  \begin{itemize}
+  \item Finish Chapter 6: Ideals
+  \item Discuss Writing/Homework
+  \item Do Chapter 7: Quotient rings
+  \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Isomorphisms}
+Informally, we think of things as being isomorphic if they are ``the same''.  This is subtly and importantly different than being ``equal''.  
+
+\begin{definition}
+A ring homomorphism $\varphi:R\to S$ is a \emph{isomorphism} if there is another ring homomorphism $\varpsi:S\to R$ with $$\varphi\circ\psi=\text{Id}_S, \quad\psi\circ\varphi=\text{Id}_R$$
+  \end{definition} 
+
+\begin{block}{A silly example}
+  Let {\color{red} $R$} be a copy of {\color{red} $\Z$} painted {\color{red}red}.
+  Let {\color{green}$S$} be a copy of {\color{green}$\Z$} painted {\color{green}green}.
+
+  Then {\color{red}$R$} and {\color{green}$S$} are isomorphic, but they aren't equal.
+  \end{block}
+
+\end{frame}
+
+\begin{frame}{A nontrivial example}
+  \begin{lemma} Let $X=\{x_1,\dots, x_n\}$ be a finite set with $n$ elements, and let $R$ be a ring.  Then
+
+    $$\text{Fun}(X,R)\cong \underbrace{R\times R\times\cdots\times R}_{\text{$n$ times}}$$
+    \end{lemma}
+
+\end{frame}
+
+\begin{frame}{Another viewpoint on isomorphisms}
+  \begin{lemma} If $\varphi:R\to S$ is a bijective homomorphism, then $\varphi$ is an isomorphism.
+  \end{lemma}
+
+  \begin{proof} Since $\varphi$ is a bijection, we know from first year that there is an inverse map $\varphi^{-1}$ of sets, we need to show that $\varphi^{-1}$ is a ring homomorphism.  \\~\\
+
+    We need to check... (See board and/or notes)
+
+ \end{proof}
+  
+\end{frame}
+
+\begin{frame}{Nonisomorphic rings}
+  Any \emph{reasonable} property of rings (i.e., defined in terms of properties of the ring structure, and not in terms of something extraneous like being {\color{green}green} or {\color{red}red}) are invariant under isomorphism.
+\\~\\
+So, for example, if $R$ and $S$ are isomorphic, and $R$ is an integral domain, than so is $S$.
+\\~\\
+To show two rings $R$ and $S$ are \emph{not} isomorphic, it is usually easiest to find something true about one ring but not the other.
+
+
+\begin{lemma} None of the rings $\Z/n\Z, \Z, \Q,\R$ or $\C$ are isomorphic to each other. \end{lemma}
+  \end{frame}
+
+
+\begin{frame}{Sneak peek at next week}
+  From a ring homomorphism $\varphi:R\to S$, we define the kernel $\ker(\phi)$ and the image $\text{Im}(\varphi)$ by
+
+  $$\text{Im}(\varphi)=\{s\in S : s=\varphi(r) \text{ for some } r\in R\}$$
+    $$\ker(\varphi)=\{r\in R : \varphi(r)=0_S\}$$
+  
+
+Though the kernel and the image are both subsets of a ring, it turns out they are very different types of subsets.
+
+\begin{itemize}
+\item The kernel is the prototypical (only!) example of an \emph{ideal}
+  \item The image is the prototypical (only!) example of a \emph{subring}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{A simple use of image and kernel}
+
+
+  \begin{lemma} Let $\varphi:R\to S$ a ring homomorphism.  Then
+
+    \begin{enumerate}
+    \item $\varphi$ is surjective if and only if $\text{Im}(\varphi)=S$
+      \item $\varphi$ is injective if and only if $\ker(\varphi)=\{0_R\}$
+      \end{enumerate}
+\end{lemma}
+
+\begin{block}{Proof}
+\begin{center} ? ? ? \end{center}
+\end{block}  
+  \end{frame}
+
+\end{document}
